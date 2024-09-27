@@ -56,7 +56,42 @@ body {
   main {
     padding: 20px;
   }
+  .typescript-code {
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
   
+  .typed-text {
+    white-space: nowrap; /* Prevent wrapping */
+    animation: typing 2s steps(30, end) infinite;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  .typescript-code::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    animation: cursor 1s infinite alternate;
+  }
+  
+  @keyframes cursor {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
   .section {
     margin-bottom: 20px;
     padding: 40px;
@@ -71,7 +106,9 @@ body {
     margin-bottom: 20px;
     text-align: center;
   }
-  
+  .section p{
+    font-size: 1.3rem;
+  }
   .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -137,7 +174,7 @@ body {
     color:#E91E63;
   }
   
-  .profile div h3 {
+  .profile div h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
   }
